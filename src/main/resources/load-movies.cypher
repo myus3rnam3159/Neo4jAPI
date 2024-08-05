@@ -496,5 +496,5 @@ CREATE (Lionsgate:Studio {name:'Lionsgate'})
 
 //Relationships between studios and actors/actresses/directors
 
-// MATCH (Columbia:Studio {name: "Columbia Pictures"}), (TomH:Person {name: "Tom Hanks"})
-// CREATE (Columbia)-[:HAS_ACTOR {as: "employee1"}]->(TomH)
+MATCH (columbia:Studio {name: "Columbia Pictures"}), (tomH:Person {name: "Tom Hanks"})
+MERGE (columbia)-[:HAS_ACTOR {as: "employee1"}]->(tomH)
